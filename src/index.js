@@ -14,7 +14,6 @@ import './index.css';
 //       );
 //     }
 //   }
-//Down
 
 function Square(props){
     return (
