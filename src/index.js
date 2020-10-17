@@ -96,6 +96,15 @@ render(){
     const current = history[history.length -1];
     const winner  = calculateWinner(current.squares);
 
+    const moves = history.map((step, move) =>{
+        const desc = move ? 'Go to move #' + move : 'Go to statr';
+        return(
+            <li key={move}>
+                <button onClick={() => this.jumpTo(move)}>{desc}</button>
+            </li>
+        );
+    });
+
     let status;
     if(winner){
         status = 'Winner '+winner;
